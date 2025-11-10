@@ -19,7 +19,7 @@ interface BlockInterface
 {
     public function render(
         string $content,
-        LinkResolver $linkResolver = null,
-        \closure $htmlSerializer = null
+        ?LinkResolver $linkResolver = null,
+        ?\closure $htmlSerializer = null
     ): string;
 }
