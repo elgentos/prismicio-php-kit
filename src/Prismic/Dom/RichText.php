@@ -42,8 +42,8 @@ class RichText
      */
     public static function asHtml(
         array $richText,
-        LinkResolver $linkResolver = null,
-        \closure $htmlSerializer = null
+        ?LinkResolver $linkResolver = null,
+        ?\closure $htmlSerializer = null
     ): string {
 
         $root = new BlockGroup;
