@@ -46,7 +46,11 @@ class BlockGroup implements BlockInterface
         return isset(self::GROUP_TAG_MAPPING[$type]) && $type === $block->type;
     }
 
-    public function render(string $content, LinkResolver $linkResolver = null, \closure $htmlSerializer = null): string
+    public function render(
+        string $content, 
+        ?LinkResolver $linkResolver = null, 
+        ?\closure $htmlSerializer = null
+    ): string
     {
         if (empty($this->blocks)) {
             return '';

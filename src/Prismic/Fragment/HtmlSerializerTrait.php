@@ -6,7 +6,7 @@ trait HtmlSerializerTrait
 {
     public function renderHtmlSerializer(
         string $content,
-        \closure $htmlSerializer = null
+        ?\closure $htmlSerializer = null
     ): string {
         if ($htmlSerializer && $custom = $htmlSerializer($this, $content)) {
             return $custom;

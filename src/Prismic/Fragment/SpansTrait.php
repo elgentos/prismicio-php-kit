@@ -21,8 +21,8 @@ trait SpansTrait
     public function renderSpans(
         string $text,
         array $spans,
-        LinkResolver $linkResolver = null,
-        \closure $htmlSerializer = null
+        ?LinkResolver $linkResolver = null,
+        ?\closure $htmlSerializer = null
     ): string {
         if (empty($spans)) {
             return $text;
