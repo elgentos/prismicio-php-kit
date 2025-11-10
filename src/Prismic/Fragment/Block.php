@@ -27,7 +27,11 @@ class Block implements BlockInterface
         ],
         HTML_TAG_DEFAULT    = 'span';
 
-    public function render(string $content, LinkResolver $linkResolver = null, \closure $htmlSerializer = null): string
+    public function render(
+        string $content, 
+        ?LinkResolver $linkResolver = null, 
+        ?\closure $htmlSerializer = null
+    ): string
     {
         if ($result = $this->renderHtmlSerializer($content, $htmlSerializer)) {
             return $result;
